@@ -1,0 +1,39 @@
+# ubank_designs
+ubank site designs - bootstrap themes.
+
+## Installation
+- Please install the latest LTS version of Node.js from [https://nodejs.org/en/download/](https://nodejs.org/en/download/).
+- Install [Yarn](https://yarnpkg.com/en/). `npm install yarn -g`.
+- Run `npm install` or `yarn install` from the ubank_designs\content directory.
+- "ubank-react-components" may not install properly. If that is the case, please temporarily delete the "ubank-react-components" line in package.json and run `npm install` or `yarn install` again. Remember to not commit this change to Git. You will need to use [yarn link](https://yarnpkg.com/lang/en/docs/cli/link/) to install it.
+- "ubank-hl-calc" may not install properly. If that is the case, please temporarily delete the "ubank-hl-calc" line in package.json and run `npm install` or `yarn install` again. Remember to not commit this change to Git. You will need to use [yarn link](https://yarnpkg.com/lang/en/docs/cli/link/) to install it.
+- "ubank-rates" may not install properly. If that is the case, please temporarily delete the "ubank-rates" line in package.json and run `npm install` or `yarn install` again. Remember to not commit this change to Git. You will need to use [yarn link](https://yarnpkg.com/lang/en/docs/cli/link/) to install it.
+
+### UBank React Components
+[https://github.aus.thenational.com/UBank/ubank-react-components](https://github.aus.thenational.com/UBank/ubank-react-components)
+1. cd to the ubank-react-components directory on your command line. Run `yarn link`.
+2. cd to the ubank_designs\content directory on your command line. Run `yarn link "@ubank/ubank-react-components"`.
+
+### UBank Home Loan Library
+[https://github.aus.thenational.com/UBank/ubank-hl-calc](https://github.aus.thenational.com/UBank/ubank-hl-calc)
+1. cd to the ubank-hl-calc directory on your command line. Run `yarn link`.
+2. cd to the ubank_designs\content directory on your command line. Run `yarn link "@ubank/ubank-hl-calc"`.
+
+### UBank Rates Library
+[https://github.aus.thenational.com/UBank/ubank-rates](https://github.aus.thenational.com/UBank/ubank-rates)
+1. cd to the ubank-rates directory on your command line. Run `yarn link`.
+2. cd to the ubank_designs\content directory on your command line. Run `yarn link "@ubank/ubank-rates"`.
+
+## Starting Webpack
+- You should not need to run the commands below in most cases. Simply run `yarn start` from the ubank_local directory instead.
+- Run `npm run build` or `yarn build` from the ubank_designs\content directory to run webpack to build the webpack bundle files.
+- Run `npm run watch` or `yarn watch` from the ubank_designs\content directory to run webpack to watch the source files for changes.
+
+## Jest unit testing
+
+- run `npm run test-watch` or `yarn test-watch` from the ubank_designs\content directory.
+
+## Development workflow with UBank-React-Component and Ubank-local libraries.
+
+
+
