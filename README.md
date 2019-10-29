@@ -1,4 +1,5 @@
 # graph_ql
+
 Examples of Graphql via Udemy Course
 
 GraphQl Playground when serving application:
@@ -13,11 +14,12 @@ Inside Resolvers, Query, [Method Name], the following args can be used:
 - Parent is handy when working with relational data
 - Great information about the operations
 - Args object of args provided
-- Info TBC
+- Info Information about the operations acros the server
+- CTX contextual information
 
 Accepted Scaler Types in Type Definition:
 String
-Boolean 
+Boolean
 Int
 Float
 ID (unique identifiers)
@@ -30,7 +32,7 @@ Type Definitions are similar to an Interface in OOP (Java, .Net, AS3 etc).
 Acting as a contract between an entity and the information
 it contacts, and what is required to be provided upon a graphql Query.
 
-This example holds a very basic pattern with Query, however 
+This example holds a very basic pattern with Query, however
 typeDefs can contain many items, e.g. User, ShoppingCartItems, Posts, Ratings
 
 const typeDefs = `
@@ -45,7 +47,7 @@ const typeDefs = `
 
 Resolvers contain Queries that can be made to retrieve data.
 Again this is the simplest version, that returns hard coded values.
-Next we'll show some examples that uncover the functionality and value of using 
+Next we'll show some examples that uncover the functionality and value of using
 GraphQl.
 
 const resolvers = {
@@ -68,7 +70,7 @@ const resolvers = {
     }
 }
 
-Here is an example which is closer to the true implementation that would 
+Here is an example which is closer to the true implementation that would
 be used in an app.
 
 const typeDefs = `
@@ -95,7 +97,7 @@ const resolvers = {
                 id: "1",
                 name: "Bob",
                 email: "bob@b.com",
-                age: 20 
+                age: 20
             }
         }
     }
@@ -105,7 +107,7 @@ Querying GraphQl:
 
 Go to: http://localhost:4000/
 
-From the playground paste in this query and it will return the static 
+From the playground paste in this query and it will return the static
 data stored inside the me() resolver.
 
 query {
@@ -123,11 +125,16 @@ query {
   greeting(name: "Jessy")
 }
 
-This parameter will be recieved by GraphQl inside the greeting resolver within the 
-'args' object. 
+This parameter will be recieved by GraphQl inside the greeting resolver within the
+'args' object.
 
 Where the query will return "Jessy" if using the code in the example above.
 
 ````
+`````
 
+Arrays
 
+In this example, the grades are required, and the items as not nullable due to the
+use of the explanation mark.
+grades: [Int!]!
