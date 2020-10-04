@@ -138,3 +138,7 @@ Arrays
 In this example, the grades are required, and the items as not nullable due to the
 use of the explanation mark.
 grades: [Int!]!
+
+# Resources
+
+Database: https://www.prisma.io/
